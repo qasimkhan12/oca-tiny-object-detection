@@ -1,6 +1,6 @@
 # Attention-Guided O+CA Training for Tiny Object Detection (Grad-CAM++ × YOLOv8)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/oca-tiny-object-detection/blob/main/OCA_Tiny_Object_Detection.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qasimkhan12/oca-tiny-object-detection/blob/main/OCA_Tiny_Object_Detection.ipynb)
 
 An **unofficial reimplementation** of an attention-guided, data-centric training framework for detecting tiny objects (pedestrians, bicycles, motorbikes…) in drone imagery.
 
