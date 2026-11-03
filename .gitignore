@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# datasets, training runs and model weights are large: keep them out of git
+datasets/
+runs/
+outputs/
+*.pt
+*.onnx
+*.cache
+
+# keep small result tables and README figures
+!results/*.md
+!results/*.json
