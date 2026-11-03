@@ -4,7 +4,7 @@
 
 An **unofficial reimplementation** of an attention-guided, data-centric training framework for detecting tiny objects (pedestrians, bicycles, motorbikes…) in drone imagery.
 
-> Based on: Swetha Manikandan, *An Attention-Guided Heatmap Clustering Framework for Tiny Object Detection Using Grad-CAM++*, M.S. thesis, Dept. of Computer Science and Engineering, Yuan Ze University, Taiwan, December 2025. Advisor: Prof. Qazi Mazhar Ul Haq.
+> Based on: Muhammad Qasim Khan, *An Attention-Guided Heatmap Clustering Framework for Tiny Object Detection Using Grad-CAM++*, Dept. of Computer Science and Engineering, Yuan Ze University, Taiwan, November 2026. Advisor: Prof. Qazi Mazhar Ul Haq.
 >
 > All credit for the method goes to the original author. This repository is my independent implementation of the method from its written description.
 
