@@ -4,7 +4,7 @@
 
 An **unofficial reimplementation** of an attention-guided, data-centric training framework for detecting tiny objects (pedestrians, bicycles, motorbikes…) in drone imagery.
 
-> Based on: Muhammad Qasim Khan, *An Attention-Guided Heatmap Clustering Framework for Tiny Object Detection Using Grad-CAM++*, Dept. of Computer Science and Engineering, Yuan Ze University, Taiwan, November 2026. Advisor: Prof. Qazi Mazhar Ul Haq.
+> Based on: Swetha Manikandan, *An Attention-Guided Heatmap Clustering Framework for Tiny Object Detection Using Grad-CAM++*, M.S. thesis, Dept. of Computer Science and Engineering, Yuan Ze University, Taiwan, December 2025. Advisor: Prof. Qazi Mazhar Ul Haq.
 >
 > All credit for the method goes to the original author. This repository is my independent implementation of the method from its written description.
 
@@ -99,6 +99,7 @@ The thesis leaves some details open or describes them in more than one way. Thes
 6. **Label projection:** a box is kept in a crop if at least 50% of its area is inside (`--min-visible`).
 7. **Redundancy removal** uses IoU only. The SSIM-based filter mentioned once in the thesis is not implemented.
 8. **MixUp probability** is not stated. Default: 0.1.
+9. **Numerical stability:** in testing, a mixed-precision (FP16) O+CA run on a Colab T4 collapsed to zero mAP partway through training. The notebook therefore trains O+CA in full precision (`--no-amp`), and `train.py` includes a watchdog that stops and flags any run whose validation mAP collapses to zero. Precision affects speed and stability, not the method.
 
 ## Results
 

@@ -60,8 +60,9 @@ def predict(model, images, imgsz, max_det):
 
 
 def coco_metrics(coco_gt, dets, max_det):
-    if not dets:
-        return {}
+    if not dets:  # model detected nothing: report zeros-as-nan explicitly instead of an empty entry
+        print("WARNING: this model made no detections at all. Its training probably failed.")
+        return {k: float("nan") for k in ["AP", "AP50", "AP75", *AREAS]} | {"per_class_AP": {}, "no_detections": True}
     coco_dt = coco_gt.loadRes(dets)
     ev = COCOeval(coco_gt, coco_dt, "bbox")
     ev.params.maxDets = [1, 100, max_det]
